@@ -8,12 +8,20 @@
   </head>
   <body>
     <div class="container">
-        <input type="text" id="frase" size="10" placeholder="Digite seu texto" /><br>
-        <button type="submit" onclick="codificar()">Codificar</button>
-        <button type="submit" onclick="decodificar()">Decodificar</button>
-    </div>
-    <div class="output" id="fraseModificada">
-        
+        <div class="inputs">
+            <textarea id="frase" placeholder="Digite seu texto"></textarea>
+            <div class="bottom">
+                <p>Apenas letras minúsculas e sem acento.</p>
+                <button class="botoes" id="codificar" type="submit" onclick="codificar()">Criptografar</button>
+                <button class="botoes" id="decodificar" type="submit" onclick="decodificar()">Descriptografar</button>
+            </div>
+        </div>
+        <div class="output">
+            <p id="nooutput">Nenhuma mensagem encontrada</p>
+            <p id="nooutput2">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <div id="frase2"></div>
+            <div id="copiar"></div>
+        </div>
     </div> 
   </body>
 </html>

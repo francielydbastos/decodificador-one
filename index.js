@@ -32,7 +32,8 @@ function codificar() {
         }
     }
 
-    document.getElementById("fraseModificada").innerHTML = fraseCodificada;
+    document.getElementById("frase2").innerHTML = fraseCodificada;
+    document.getElementById("copiar").innerHTML = '<button class="botoes" id="copiar" type="submit" onclick="codificar()">Copiar</button>';
 }
 
 function decodificar() {
@@ -45,5 +46,6 @@ function decodificar() {
                                        .replaceAll("ober", "o")
                                        .replaceAll("ufat", "u");
 
-    document.getElementById("fraseModificada").innerHTML = fraseDecodificada;
+    document.getElementById("frase2").innerHTML = fraseDecodificada;
+    document.getElementById("copiar").innerHTML = '<button class="botoes" id="copiar" type="submit" onclick="codificar()">Copiar</button>';
 }
