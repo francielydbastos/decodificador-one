@@ -6,7 +6,7 @@ A letra "o" é convertida para "ober"
 A letra "u" é convertida para "ufat"*/
 
 function codificar() {
-    let fraseCodificar = document.getElementById("frase").value;
+    let fraseCodificar = document.getElementById("input").value;
     let fraseCodificada = ""; 
 
     for (let i = 0; i < fraseCodificar.length; i++) {
@@ -32,11 +32,11 @@ function codificar() {
         }
     }
 
-    document.getElementById("outcontent").innerHTML = fraseCodificada + '<button id="copiar" type="submit" onclick="codificar()">Copiar</button>';
+    document.getElementById("output").value = fraseCodificada;
 }
 
 function decodificar() {
-    let fraseCodificada = document.getElementById("frase").value;
+    let fraseCodificada = document.getElementById("input").value;
     let fraseDecodificada = "";
 
     fraseDecodificada = fraseCodificada.replaceAll("ai", "a")
@@ -45,5 +45,11 @@ function decodificar() {
                                        .replaceAll("ober", "o")
                                        .replaceAll("ufat", "u");
 
-    document.getElementById("outcontent").innerHTML = fraseCodificada + '<button id="copiar" type="submit" onclick="codificar()">Copiar</button>';
+    document.getElementById("output").value = fraseDecodificada;
+}
+
+function copiar() {
+
+    output.select();
+    navigator.clipboard.writeText(output.value);
 }

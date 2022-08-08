@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <title>(De)Codificador de Texto</title>
     <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href='https://fonts.googleapis.com/css?family=Bebas+Neue' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="index.js"></script>
   </head>
   <body>
     <header>
       <div class="caixa">
-          <h1><img src="resources/Vector.png"></h1>
+          <img src="resources/Vector.png" alt="Logo do Decodificador">
+          <h1>(De)Codificador de Texto</h1>
       </div>
     </header>
+
     <main>
-        <div class="inputs">
-            <textarea id="frase" placeholder="Digite seu texto"></textarea>
-            <div class="bottom">
-                <p>Apenas letras minúsculas e sem acento.</p>
-                <button class="botoes" id="codificar" type="submit" onclick="codificar()">Criptografar</button>
-                <button class="botoes" id="decodificar" type="submit" onclick="decodificar()">Descriptografar</button>
-            </div>
+      <div class="main-caixa">
+        <textarea id="input" placeholder="Digite seu texto! "></textarea>
+        <p><span class="material-symbols-outlined">error</span> Apenas letras minúsculas e sem acento.</p>
+  
+        <div class="div-botoes-principais">
+          <button class="botoes" id="codificar" type="submit" onclick="codificar()"><span class="material-symbols-outlined">
+            code</span> Criptografar</button>
+          <button class="botoes" id="decodificar" type="submit" onclick="decodificar()"><span class="material-symbols-outlined">
+            code_off</span> Descriptografar</button>
         </div>
-        <div class="output">
-          <div id="outcontent">
-          </div>
+  
+        <textarea readonly id="output" placeholder="A resposta virá aqui! :)"></textarea>
+        <div class="div-botoes-principais">
+          <button class="botoes" id="copiar" type="submit" onclick="copiar()"><span class="material-symbols-outlined">
+            content_copy</span> Copiar</button>
         </div>
+      </div>
     </main> 
   </body>
 </html>
